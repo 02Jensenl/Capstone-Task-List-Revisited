@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CapstoneToDo.Models.ToDoItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Assignment List</h1>
+
+<p>
+    <a asp-action="AddAssignment">Create New Assignment</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complete)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => item.Complete, new { onclick = "Update(this)" })
+                    @*@Html.CheckBox("Update", false, new { onchange = "UpdateOnChange(this)" })*@
+                    @*@Html.DisplayFor(modelItem => item.Complete)*@
+                </td>
+
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.Id" asp-controller="Assignment" method="post"> Mark task as complete</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" asp-controller="Assignment" method="post"> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

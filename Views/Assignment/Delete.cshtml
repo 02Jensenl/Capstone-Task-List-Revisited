@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+
+
+@model ToDoItem
+
+<p>Description: @Model.Description</p>
+<p>Due Date: @Model.DueDate</p>
+<p>Complete: @Model.Complete</p>
+
+<p>Do you wish to delete this assignment?</p>
+
+
+<form asp-action="Delete" asp-controller="Assignment" method="post">
+    <input hidden name="Id" value="@Model.Id" />
+    <input hidden name="Description" value="@Model.Description" />
+    <input hidden name="Complete" value="@Model.Complete" />
+    <input type="submit" value="Yes" />
+</form>
+
+
+<a asp-action="Index" asp-controller="Assignment"><button>No</button></a>

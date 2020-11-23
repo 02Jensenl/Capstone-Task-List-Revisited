@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneToDo", "CapstoneToDo.csproj", "{023F7852-334A-47D6-8440-C04DFDF4657C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{023F7852-334A-47D6-8440-C04DFDF4657C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023F7852-334A-47D6-8440-C04DFDF4657C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023F7852-334A-47D6-8440-C04DFDF4657C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023F7852-334A-47D6-8440-C04DFDF4657C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {004E67AC-91B9-4AC3-98B4-B012513542CC}
+	EndGlobalSection
+EndGlobal

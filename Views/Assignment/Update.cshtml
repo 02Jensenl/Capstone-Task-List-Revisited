@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+
+@model ToDoItem
+
+
+
+<h1>Mark as Complete</h1>
+
+
+<p>Description: @Model.Description</p>
+<p>Due Date: @Model.DueDate</p>
+<p>Complete: @Model.Complete</p>
+
+<p>Do you wish to mark this assignment as complete?</p>
+
+
+<form method="post">
+    <select name="Complete" value="@Model.Complete">
+     
+        <option value="True">Yes</option>
+
+
+        <option value="False">No</option>
+    </select>
+    <input type="submit" value="Save Changes" />
+
+
+
+
+
+</form>
+
+

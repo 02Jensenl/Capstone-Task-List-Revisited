@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "AddAssignment";
+}
+
+@model ToDoItem
+
+<h1>Add An Assignment</h1>
+
+
+<form asp-controller="Assignment" asp-action="AddAssignment" method="post">
+
+    Description: <input type="text" name="Description" value="@Model.Description" required/>
+   
+
+    Due Date: <input type="date" name="DueDate" value="@Model.DueDate.ToString()" min="@DateTime.Today.ToString("yyyy-MM-dd")" required />
+    <span asp-validation-for="DueDate"></span>
+
+
+    <input type="submit" />
+
+</form>
